@@ -1,10 +1,10 @@
-package rocks.zipcode.io.stringutils.getallcasings;
+package rocks.zipcode.io.stringutils;
 
 import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcode.io.StringUtils;
 
-public class TwoLetterWordsTest {
+public class GetAllCasingsTest {
     @Test
     public void test1() {
         // given
