@@ -5,12 +5,13 @@ import java.util.*;
 /**
  * @author leon on 10/01/2019.
  */
-public class Permutator extends GenericPermutator<Integer> {
-    public Permutator(Integer... integers) {
+public class IntegerPermutator extends GenericPermutator<Integer> {
+    public IntegerPermutator(Integer... integers) {
         super(integers);
     }
 
-    public Set<Set<Integer>> getAll() {
+    @Override
+    public Set<Set<Integer>> permute() {
         Set<Set<Integer>> sets = new HashSet<>();
         if (originalSet.isEmpty()) {
             sets.add(new HashSet<>());
@@ -19,7 +20,7 @@ public class Permutator extends GenericPermutator<Integer> {
         List<Integer> list = new ArrayList<>(originalSet);
         Integer head = list.get(0);
         Set<Integer> rest = new HashSet<>(list.subList(1, list.size()));
-        for (Set<Integer> set : new Permutator(rest.toArray(new Integer[0])).getAll()) {
+        for (Set<Integer> set : new IntegerPermutator(rest.toArray(new Integer[0])).permute()) {
             Set<Integer> newSet = new HashSet<>();
             newSet.add(head);
             newSet.addAll(set);
@@ -27,9 +28,5 @@ public class Permutator extends GenericPermutator<Integer> {
             sets.add(set);
         }
         return sets;
-    }
-
-    public Set<Integer> getOriginalSet() {
-        return originalSet;
     }
 }

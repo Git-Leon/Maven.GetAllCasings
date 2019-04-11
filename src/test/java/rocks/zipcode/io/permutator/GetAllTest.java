@@ -2,7 +2,7 @@ package rocks.zipcode.io.permutator;
 
 import org.junit.Assert;
 import org.junit.Test;
-import rocks.zipcode.io.Permutator;
+import rocks.zipcode.io.IntegerPermutator;
 
 import java.util.Set;
 
@@ -42,8 +42,8 @@ public class GetAllTest {
     }
 
     public void test(Integer[] input, String expectedAsString) {
-        Permutator permutator = new Permutator(input);
-        Set<Set<Integer>> actual = permutator.getAll();
+        IntegerPermutator permutator = new IntegerPermutator(input);
+        Set<Set<Integer>> actual = permutator.permute();
         Assert.assertEquals(actual.toString(), expectedAsString);
     }
 }

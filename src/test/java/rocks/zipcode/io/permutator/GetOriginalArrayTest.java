@@ -2,7 +2,7 @@ package rocks.zipcode.io.permutator;
 
 import org.junit.Assert;
 import org.junit.Test;
-import rocks.zipcode.io.Permutator;
+import rocks.zipcode.io.IntegerPermutator;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -40,7 +40,7 @@ public class GetOriginalArrayTest {
 
     public void test(Integer... input) {
         Set<Integer> expected = new HashSet<>(Arrays.asList(input));
-        Permutator permutator = new Permutator(input);
+        IntegerPermutator permutator = new IntegerPermutator(input);
         Assert.assertEquals(expected, permutator.getOriginalSet());
     }
 }

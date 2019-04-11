@@ -9,9 +9,9 @@ import java.util.Set;
  */
 public class StringUtils {
     public static Iterable<String> getAllCasings(String string) {
-        Permutator permutator = new Permutator(IntegerArrayUtils.range(0, string.length()-1));
+        IntegerPermutator permutator = new IntegerPermutator(IntegerArrayUtils.range(0, string.length()-1));
         Set<String> list = new HashSet<>();
-        for (Set<Integer> indexSet : permutator.getAll()) {
+        for (Set<Integer> indexSet : permutator.permute()) {
             String result = upperCaseIndices(string, indexSet.toArray(new Integer[0]));
             list.add(result);
         }
