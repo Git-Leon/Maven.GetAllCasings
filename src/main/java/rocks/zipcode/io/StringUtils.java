@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class StringUtils {
     public static Collection<String> getAllCasings(String string) {
-        PowerSet<Integer> permutator = new PowerSet<>(IntegerArrayUtils.range(0, string.length()-1));
+        PowerSet<Integer> permutator = new PowerSet<>(ArrayUtils.getRange(0, string.length()-1));
         Set<String> list = new HashSet<>();
         for (Set<Integer> indexSet : permutator.permute()) {
             String result = upperCaseIndices(string, indexSet.toArray(new Integer[0]));
