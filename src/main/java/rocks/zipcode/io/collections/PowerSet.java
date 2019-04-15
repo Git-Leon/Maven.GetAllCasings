@@ -8,12 +8,15 @@ import java.util.*;
  * @author leon on 10/01/2019.
  */
 public class PowerSet<TypeOfSet> {
-    protected final LinkedHashSet<TypeOfSet> originalSet;
+    protected final Set<TypeOfSet> originalSet;
 
-    public PowerSet(TypeOfSet[] typeOfSet) {
-        this.originalSet = new LinkedHashSet<>(Arrays.asList(typeOfSet));
+    public PowerSet(TypeOfSet[] originalSet) {
+        this.originalSet = new LinkedHashSet<>(Arrays.asList(originalSet));
     }
 
+    /**
+     * @return the powerset of `originalSet`
+     */
     public Set<Set<TypeOfSet>> permute() {
         Set<Set<TypeOfSet>> sets = new LinkedHashSet<>();
         if (originalSet.isEmpty()) {
@@ -34,6 +37,9 @@ public class PowerSet<TypeOfSet> {
         return sets;
     }
 
+    /**
+     * @return `originalSet`
+     */
     public Set<TypeOfSet> getOriginalSet() {
         return originalSet;
     }
