@@ -6,8 +6,9 @@ import java.util.Collection;
 import java.util.List;
 
 public class CollectionUtils {
-    public static List<?> toList(Collection collection) {
-        List<?> list = new ArrayList<>();
+
+    public static <E> List<E> toList(Collection collection) {
+        List<E> list = new ArrayList<>();
         list.addAll(collection);
         return list;
     }
