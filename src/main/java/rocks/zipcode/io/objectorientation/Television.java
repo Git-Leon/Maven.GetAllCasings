@@ -8,14 +8,6 @@ public class Television {
         this.isTurnedOn = true;
     }
 
-    public void turnOff() {
-        this.isTurnedOn = true;
-    }
-
-    public Boolean isTurnedOn() {
-        return isTurnedOn;
-    }
-
     public void setChannel(Integer channel) {
         if(!isTurnedOn) {
             throw new IllegalStateException();

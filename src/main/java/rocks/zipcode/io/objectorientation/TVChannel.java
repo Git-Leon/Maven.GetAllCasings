@@ -13,6 +13,10 @@ public enum TVChannel {
     NBC,
     CBS;
 
+    /**
+     * @param ordinal; ordinal of the expected enumeration
+     * @return enumeration with respective ordinal
+     */
     public static TVChannel getByOrdinal(int ordinal) {
         return Arrays.asList(TVChannel.values())
                 .stream()
