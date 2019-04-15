@@ -3,8 +3,7 @@
 * This quiz has sections
 	1. fundamentals
 		* `BasicStringUtils`
-		* `NumberUtils`
-		* `StringUtils`
+		* `StringUtils` - difficult
 	2. arrays
 		* `ArrayUtils`
 	3. collections
@@ -12,8 +11,9 @@
 		* `PowerSet`
 	4. generics
 	    * `GenericUtils`
-    5. object orientation
-        * ``
+	4. generics
+	    * `Television`
+	    * `TVChannel`
 
 
 
@@ -27,89 +27,55 @@
 
 ### BasicStringUtils
 * **Description**
-	* The purpose of this class is to evaluator palindromes.
-	* A _palindrome_ is a word or phrase that is spelled the same forwards and backwards.
-		* the word `racecar` is an example of a palindrome
+	* The purpose of this class is to perform basic `String` manipulations.
 * **Methods to Complete**
-	* `String reverseString(String str)`
-	* `Boolean isPalindrome(String str)`
-	* `String[] getAllPalindromes(String str)`
+	* `String getString(char[])`
+	* `String getString(Character[])`
+	* `String removeAllVowels(String)`
+	* `String removeSpecifiedCharacters(String, String)`
 
-### StringEvaluator
+### StringUtils
 * **Description**
-	* The purpose of this class is to create a utility class for `String`
+	* The purpose of this class is to aggregate _utility methods_ to define a `getAllCasings` method.
 * **Methods to Complete**
-	* `String[] getAllSubstrings(String string)`
-	* `String[] getCommonSubstrings(String string1, String string2)`
-	* `String[] getLargestCommonSubstring(String string1, String string2)`
+	* `Collection<String> getAllCasings(String)
+	* `String upperCaseIndices(String, Integer...)`
+	* `String insertAtIndex(String, String, Integer)`
+	* `String replaceAtIndex(String, Character, Integer)`
 
 
-## Section 2 - Object Orientation
-### PalindromeObject
+
+
+
+## Section 2 - Arrays
+### ArrayUtils
 * **Description**
-	* The purpose of this class is to create an object capable of evaluating palindromes.
+	* The purpose of this class is to manipulate Array objects
 * **Methods to Complete**
-	* `String reverseString()`
-	* `Boolean isPalindrome()`
-	* `String[] getAllPalindromes()`
-
-
-### StringAssembler
-* **Description**
-	* The purpose of this class is to create a wrapper class for `StringBuilder` 
-* **Methods to Complete**
-	* `StringAssembler append(String string)`
-	* `String append()`
-
-
-### StringEvaluatorObject
-* **Description**
-	* The purpose of this class is to create a wrapper object for `StringEvaluator` 
-* **Methods to Complete**
-	* `String[] getAllSubstrings()`
-	* `String[] getCommonSubstrings(String string2)`
-	* `String[] getLargestCommonSubstring(String string2)`
-
-
-
-
-
-
-
+	* `Integer[] getRange(Integer, Integer)`
+	* `char[] unbox(Character[])`
+	* `Character[] box(char[])`
 
 
 
 
 <hr><hr>
 
-## Section 3 - Collections
-### Student
+## Section 3 - Object Orientation
+### Television
 * **Description**
-	* The purpose of this class is to manage `totalAmountOfHoursLearned`
+	* The purpose of this class is to model a Television by composing a `TVChannel` and `isTurnedOn` flag.
 * **Methods to Complete**
-	* `void learn(Double amountOfHours)`
-	* `Double getTotalStudyTime()`
+	* `void turnOn()`
+	* `void setChannel(Integer channel)`
+	* `TVChannel getChannel()`
 
-### ZipCodeWilmington
+### TVChannel
 * **Description**
-	* The purpose of this class is to mediate `List` of `Student` objects.
+	* The purpose of this class is to create a set of Enumerations each representative of an expected `TVChannel`
 * **Methods to Complete**
-	* `void enroll(Student student)`
-	* `Boolean isEnrolled(Student student)`
-	* `void lecture(double numberOfHours)`
-	* `Map<Student, Double> getStudyMap()`
-
-### SimpleStringGroup
-* **Description**
-	* The purpose of this class is to create a wrapper of `List` of `String` objects
-* **Methods to Complete**
-	* `Integer count()`
-	* `void insert(String string)`
-	* `Boolean has(String string)`
-	* `String fetch(int indexOfValue)`
-	* `void delete(String string)`
-	* `void clear()`
-
+	* `TVChannel getByOrdinal(int)`
+	
 
 
 
@@ -126,46 +92,36 @@
 <hr><hr>
 
 ## Section 4 - Generics
-### MyStack<T>
+### GenericUtils<T>
 * **Description**
-	* The purpose of this class is to implement a _proper_ `Stack`.
+	* The purpose of this class is create methods to handle generic operations
 * **Methods to Complete**
-	* `void push(T value)`
-	* `T peek()`
-	* `T pop()`
-	* `Boolean isEmpty()`
+	* `<T> T[] toArray(Collection<T>`
 
-### Group<T>
-* **Description**
-	* The purpose of this class is to create a generic wrapper for a `List` object
-* **Methods to Complete**
-	* `Integer count()`
-	* `void insert(T value)`
-	* `Boolean has(T value)`
-	* `T fetch(int indexOfValue)`
-	* `void delete(T value)`
-	* `void clear()`
-	* `Iterator<T> iterator()`
 
-### SortedGroup<T>
-* **Description**
-	* The purpose of this class is to create a generic wrapper for sorted `List` object.
-* **Methods to Complete**
-	* `insert(T value)`
-	* `delete(T value)`
-	* `Integer indexOf(T value)`
 
-### GenericUtils
-* **Description**
-	* The purpose of this class is to create a procedure to generate the [power set](https://www.mathsisfun.com/sets/power-set.html) of an `Set` of objects.
-* **Methods to Complete**
-	* `<T extends Comparable> Iterable<? extends Iterable<T>> powerSet(Set<T> originalSet)`
-	* `<T extends Comparable> Iterable<? extends Iterable<T>> powerSet(T... originalSet)`
 
-### ComparableTreeSet<T>
+
+
+
+
+
+
+
+
+
+<hr><hr>
+
+## Section 5 - Collections
+### CollectionUtils<T>
 * **Description**
-	* The purpose of this class is to create subclass of a `TreeSet<T>` which can `compareTo` other objects of the same type.
-	* This shit is hard.
+	* The purpose of this class is create methods to handle operations on collection objects
 * **Methods to Complete**
-	* `int compareTo(ComparableTreeSet<T> o)`
+	* `<E> List<E> toList(Collection)`
+	* `Boolean contains(Collection<? extends Collection<?>>, Collection<?>)`
+	* `Collection<? extends Collection<?>> nest(Collection<?>...)`
+	* `Collection<?> flatten(Collection<?>...)`
+
+
+
 	
