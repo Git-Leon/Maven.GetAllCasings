@@ -1,5 +1,6 @@
 package rocks.zipcode.io.collections;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 public class CollectionUtils {
@@ -10,5 +11,13 @@ public class CollectionUtils {
             }
         }
         return false;
+    }
+
+    public static Collection<? extends Collection<?>> nest(Collection<?>... collections) {
+        return Arrays.asList(collections);
+    }
+
+    public static Collection<?> flatten(Collection<?>... collections) {
+        return null;
     }
 }

@@ -12,4 +12,22 @@ public class ArrayUtils {
         }
         return result;
     }
+
+    public static char[] unbox(Character[] array) {
+        char[] unboxedArray = new char[array.length];
+        for (int i = 0; i < array.length; i++) {
+            char character = array[i];
+            unboxedArray[i] = character;
+        }
+        return unboxedArray;
+    }
+
+    public static Character[] box(char[] array) {
+        Character[] boxedArray = new Character[array.length];
+        for (int i = 0; i < array.length; i++) {
+            Character character = array[i];
+            boxedArray[i] = character;
+        }
+        return boxedArray;
+    }
 }
