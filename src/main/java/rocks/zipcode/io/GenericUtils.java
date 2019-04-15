@@ -9,11 +9,10 @@ import java.util.Set;
 public class GenericUtils {
     public static  <T> T[] toArray(Collection<T> set) {
         List<T> list = new ArrayList<>(set);
-        T[] toR = (T[]) Array.newInstance(list.get(0).getClass(), list.size());
+        T[] toR = (T[]) new Object[set.size()];
         for (int i = 0; i < list.size(); i++) {
             toR[i] = list.get(i);
         }
         return toR;
     }
-
 }

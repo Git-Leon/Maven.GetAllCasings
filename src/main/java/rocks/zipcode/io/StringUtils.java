@@ -1,6 +1,7 @@
 package rocks.zipcode.io;
 
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,8 +9,8 @@ import java.util.Set;
  * @author leon on 10/01/2019.
  */
 public class StringUtils {
-    public static Iterable<String> getAllCasings(String string) {
-        IntegerPermutator permutator = new IntegerPermutator(IntegerArrayUtils.range(0, string.length()-1));
+    public static Collection<String> getAllCasings(String string) {
+        PowerSet<Integer> permutator = new PowerSet<>(IntegerArrayUtils.range(0, string.length()-1));
         Set<String> list = new HashSet<>();
         for (Set<Integer> indexSet : permutator.permute()) {
             String result = upperCaseIndices(string, indexSet.toArray(new Integer[0]));
