@@ -1,7 +1,7 @@
-package rocks.zipcode.io.integerarrayutils;
+package rocks.zipcode.io.arrays.integerarrayutils;
 
 import org.junit.Test;
-import rocks.zipcode.io.ArrayUtils;
+import rocks.zipcode.io.arrays.ArrayUtils;
 import rocks.zipcode.io.TestUtilities;
 
 /**

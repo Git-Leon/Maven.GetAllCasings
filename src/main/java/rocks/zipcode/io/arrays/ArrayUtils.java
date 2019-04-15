@@ -1,4 +1,4 @@
-package rocks.zipcode.io;
+package rocks.zipcode.io.arrays;
 
 /**
  * @author leon on 24/01/2019.

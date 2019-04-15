@@ -1,7 +1,7 @@
-package rocks.zipcode.io.powerset.character;
+package rocks.zipcode.io.collections.powerset.character;
 
 import org.junit.Test;
-import rocks.zipcode.io.powerset.PowerSetTestUtilities;
+import rocks.zipcode.io.collections.powerset.PowerSetTestUtilities;
 
 import java.util.Arrays;
 

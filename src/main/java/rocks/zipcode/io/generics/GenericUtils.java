@@ -1,4 +1,4 @@
-package rocks.zipcode.io;
+package rocks.zipcode.io.generics;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,6 @@
-package rocks.zipcode.io;
+package rocks.zipcode.io.collections;
+
+import rocks.zipcode.io.generics.GenericUtils;
 
 import java.util.*;
 

@@ -1,8 +1,8 @@
-package rocks.zipcode.io.powerset.integer;
+package rocks.zipcode.io.collections.powerset.integer;
 
 
 import org.junit.Test;
-import rocks.zipcode.io.powerset.PowerSetTestUtilities;
+import rocks.zipcode.io.collections.powerset.PowerSetTestUtilities;
 
 import java.util.Arrays;
 @SuppressWarnings("all")

@@ -1,8 +1,8 @@
-package rocks.zipcode.io.stringutils;
+package rocks.zipcode.io.fundamentals.stringutils;
 
 import org.junit.Assert;
 import org.junit.Test;
-import rocks.zipcode.io.StringUtils;
+import rocks.zipcode.io.fundamentals.StringUtils;
 
 /**
  * @author leon on 24/01/2019.

@@ -1,57 +1,57 @@
-package rocks.zipcode.io.powerset.string;
+package rocks.zipcode.io.collections.powerset.character;
 
 
 import org.junit.Test;
-import rocks.zipcode.io.powerset.PowerSetTestUtilities;
+import rocks.zipcode.io.collections.powerset.PowerSetTestUtilities;
 
 import java.util.Arrays;
 
 @SuppressWarnings("all")
-public class OneStringElementTest {
+public class OneCharacterElementTest {
     @Test
     public void test1() {
-        String[] input = {"0"};
+        Character[] input = {'0'};
         PowerSetTestUtilities.test(input,
                 Arrays.asList(),
-                Arrays.asList("0")
+                Arrays.asList('0')
         );
     }
 
     @Test
     public void test2() {
-        String[] input = {"a"};
+        Character[] input = {'a'};
         PowerSetTestUtilities.test(input,
                 Arrays.asList(),
-                Arrays.asList("a")
+                Arrays.asList('a')
         );
     }
 
 
     @Test
     public void test3() {
-        String[] input = {"b"};
+        Character[] input = {'b'};
         PowerSetTestUtilities.test(input,
                 Arrays.asList(),
-                Arrays.asList("b")
+                Arrays.asList('b')
         );
     }
 
 
     @Test
     public void test4() {
-        String[] input = {"c"};
+        Character[] input = {'c'};
         PowerSetTestUtilities.test(input,
                 Arrays.asList(),
-                Arrays.asList("c")
+                Arrays.asList('c')
         );
     }
 
     @Test
     public void test5() {
-        String[] input = {"d"};
+        Character[] input = {'d'};
         PowerSetTestUtilities.test(input,
                 Arrays.asList(),
-                Arrays.asList("d")
+                Arrays.asList('d')
         );
     }
 }

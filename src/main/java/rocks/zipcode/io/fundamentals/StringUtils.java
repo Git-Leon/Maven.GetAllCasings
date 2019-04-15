@@ -1,5 +1,8 @@
-package rocks.zipcode.io;
+package rocks.zipcode.io.fundamentals;
 
+
+import rocks.zipcode.io.collections.PowerSet;
+import rocks.zipcode.io.arrays.ArrayUtils;
 
 import java.util.Collection;
 import java.util.HashSet;

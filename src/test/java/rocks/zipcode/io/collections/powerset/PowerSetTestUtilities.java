@@ -1,7 +1,7 @@
-package rocks.zipcode.io.powerset;
+package rocks.zipcode.io.collections.powerset;
 
 import org.junit.Assert;
-import rocks.zipcode.io.PowerSet;
+import rocks.zipcode.io.collections.PowerSet;
 
 import java.util.*;
 
