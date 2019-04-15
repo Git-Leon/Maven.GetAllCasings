@@ -6,7 +6,7 @@ import org.junit.Test;
 public class TVChannelTest {
     @Test
     public void test0() {
-        Assert.assertEquals(10, TVChannel.values().length);
+        Assert.assertEquals(9, TVChannel.values().length);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class TVChannelTest {
 
     @Test
     public void test4() {
-        test(3, "A&E");
+        test(3, "AE");
     }
 
     @Test
@@ -51,7 +51,7 @@ public class TVChannelTest {
 
     @Test
     public void test9() {
-        test(9, "CBS");
+        test(8, "CBS");
     }
 
     private void test(int enumOrdinal, String expectedName) {

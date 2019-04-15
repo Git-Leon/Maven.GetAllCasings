@@ -17,6 +17,9 @@ public class Television {
     }
 
     public void setChannel(Integer channel) {
+        if(!isTurnedOn) {
+            throw new IllegalStateException();
+        }
         this.currentChannel = TVChannel.getByOrdinal(channel);
     }
 
