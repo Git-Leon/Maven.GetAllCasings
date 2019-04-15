@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcode.io.fundamentals.BasicStringUtils;
 
-public class ReplaceAllCharacters {
+public class RemoveSpecifiedCharacters {
     @Test
     public void test1() {
         test("ABCDEFG", "ABC", "DEFG");
@@ -33,7 +33,7 @@ public class ReplaceAllCharacters {
     private void test(String input, String charactersToReplace, String expected) {
         // given
         // when
-        String actual = BasicStringUtils.replaceAllCharacters(input,charactersToReplace);
+        String actual = BasicStringUtils.removeSpecifiedCharacters(input,charactersToReplace);
 
         // then
         Assert.assertEquals(expected, actual);

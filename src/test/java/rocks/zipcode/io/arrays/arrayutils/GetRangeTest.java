@@ -1,4 +1,4 @@
-package rocks.zipcode.io.arrays.integerarrayutils;
+package rocks.zipcode.io.arrays.arrayutils;
 
 import org.junit.Test;
 import rocks.zipcode.io.arrays.ArrayUtils;
@@ -7,7 +7,7 @@ import rocks.zipcode.io.TestUtilities;
 /**
  * @author leon on 24/01/2019.
  */
-public class RangeTest {
+public class GetRangeTest {
     @Test
     public void test1() {
         Integer start = 0;

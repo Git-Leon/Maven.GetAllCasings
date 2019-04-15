@@ -11,11 +11,11 @@ public class BasicStringUtils {
         return getString(ArrayUtils.unbox(chars));
     }
 
-    public static String replaceAllVowels(String string) {
-        return replaceAllCharacters(string, "aeiou");
+    public static String removeAllVowels(String string) {
+        return removeSpecifiedCharacters(string, "aeiouAEIOU");
     }
 
-    public static String replaceAllCharacters(String string, String charactersToReplace) {
+    public static String removeSpecifiedCharacters(String string, String charactersToReplace) {
         char[] vowels = charactersToReplace.toCharArray();
         for (int i = 0; i < vowels.length; i++) {
             Character vowel = vowels[i];
